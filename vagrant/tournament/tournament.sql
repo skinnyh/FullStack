@@ -7,3 +7,27 @@
 -- these lines here.
 
 
+--clean up and connect to database
+DROP DATABASE IF EXISTS tournament;
+CREATE DATABASE tournament;
+
+\connect tournament
+
+--create tables and view
+CREATE TABLE players (
+	id serial primary key,
+	name text
+);
+
+CREATE TABLE matches (
+	id serial primary key,
+	winner integer references players (id),
+	loser integer references players (id)
+);
+
+CREATE VIEW standings AS
+SELECT p.id, name,
+	(SELECT count(*) FROM matches WHERE winner = p.id) AS wins,
+	(SELECT count(*) FROM matches WHERE p.id IN (winner, loser)) AS matches
+FROM players p
+ORDER BY wins DESC
