@@ -1,5 +1,6 @@
 # Tournament Results
 https://www.udacity.com/course/intro-to-relational-databases--ud197
+
 Udacity SQL Intro
 
 ## Project Specification
@@ -43,8 +44,6 @@ The latest vagrant build for the Udacity tournament project. (In project notes)
 
 ## Expected Outcome
 
-Success!  All tests pass!  
-vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ python tournament_test.py  
 1. Old matches can be deleted.  
 2. Player records can be deleted.  
 3. After deleting, countPlayers() returns zero.  
