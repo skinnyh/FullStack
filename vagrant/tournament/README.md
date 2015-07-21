@@ -1,6 +1,5 @@
 # Tournament Results
 https://www.udacity.com/course/intro-to-relational-databases--ud197
-
 Udacity SQL Intro
 
 ## Project Specification
